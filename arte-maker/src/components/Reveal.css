@@ -1,0 +1,51 @@
+.reveal {
+  opacity: 0;
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+
+  will-change: opacity, transform;
+}
+
+
+/* ENTRA DE BAIXO */
+
+.reveal-up {
+  transform: translateY(35px);
+}
+
+
+/* ENTRA DA ESQUERDA */
+
+.reveal-left {
+  transform: translateX(-35px);
+}
+
+
+/* ENTRA DA DIREITA */
+
+.reveal-right {
+  transform: translateX(35px);
+}
+
+
+/* VISÍVEL */
+
+.reveal-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+}

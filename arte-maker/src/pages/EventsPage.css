@@ -1,0 +1,546 @@
+/* ======================================================
+   PÁGINA DE EVENTOS
+====================================================== */
+
+.events-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--white);
+}
+
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.events-page-hero {
+  width: 100%;
+
+  padding:
+    90px
+    max(40px, calc((100vw - var(--container)) / 2))
+    75px;
+
+  background: var(--orange);
+
+  color: var(--black);
+}
+
+
+.events-page-hero > span {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.events-page-hero h1 {
+  margin: 0;
+
+  font-size: clamp(58px, 8vw, 105px);
+
+  line-height: 0.85;
+
+  letter-spacing: -4px;
+}
+
+
+.events-page-hero p {
+  max-width: 620px;
+
+  margin-top: 28px;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: rgba(17, 17, 17, 0.78);
+}
+
+
+/* ======================================================
+   CONTEÚDO
+====================================================== */
+
+.events-page-content {
+  width: min(
+    var(--container),
+    calc(100% - 80px)
+  );
+
+  margin: 0 auto;
+
+  padding: 70px 0 110px;
+}
+
+
+/* ======================================================
+   FILTROS
+====================================================== */
+
+.events-page-filters {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 45px;
+}
+
+
+.events-page-filters button {
+  appearance: none;
+
+  padding: 10px 18px;
+
+  border: 1px solid #d9d9d9;
+
+  border-radius: 999px;
+
+  background: var(--white);
+
+  color: var(--black);
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.events-page-filters button:hover {
+  border-color: var(--pink);
+
+  transform: translateY(-2px);
+}
+
+
+.events-page-filters button.active {
+  background: var(--pink);
+
+  border-color: var(--pink);
+
+  color: var(--white);
+}
+
+
+/* ======================================================
+   GRID
+====================================================== */
+
+.events-page-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+
+  align-items: stretch;
+}
+
+
+/* ======================================================
+   CARD
+====================================================== */
+
+.events-page-card {
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 340px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  overflow: hidden;
+
+  background: var(--cream);
+
+  border: 1px solid #ebe7df;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* CANTOS IRREGULARES */
+
+.events-page-card:nth-child(4n + 1) {
+  border-radius: 6px 22px 6px 22px;
+}
+
+
+.events-page-card:nth-child(4n + 2) {
+  border-radius: 22px 6px 22px 6px;
+}
+
+
+.events-page-card:nth-child(4n + 3) {
+  border-radius: 6px 22px 22px 6px;
+}
+
+
+.events-page-card:nth-child(4n + 4) {
+  border-radius: 22px 6px 6px 22px;
+}
+
+
+.events-page-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.09);
+}
+
+
+/* ======================================================
+   IMAGEM
+====================================================== */
+
+.events-page-image {
+  width: 100%;
+  height: 340px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--blue);
+}
+
+
+.events-page-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+
+.events-page-card:hover
+.events-page-image img {
+  transform: scale(1.035);
+}
+
+
+/* DATA */
+
+.events-page-date {
+  position: absolute;
+
+  left: 12px;
+  bottom: 12px;
+
+  padding: 8px 12px;
+
+  border-radius: 5px;
+
+  background: var(--pink);
+
+  color: var(--white);
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* ======================================================
+   CONTEÚDO DO CARD
+====================================================== */
+
+.events-page-info {
+  min-width: 0;
+
+  padding: 35px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* TIPO */
+
+.events-page-type {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--pink);
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+}
+
+
+/* TÍTULO */
+
+.events-page-info h2 {
+  margin: 0 0 12px;
+
+  font-size: clamp(
+    28px,
+    3vw,
+    42px
+  );
+
+  line-height: 0.95;
+
+  letter-spacing: -1.5px;
+
+  overflow-wrap: break-word;
+}
+
+
+/* LOCAL */
+
+.events-page-location {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--blue);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  overflow-wrap: break-word;
+}
+
+
+/* DESCRIÇÃO */
+
+.events-page-info p {
+  margin: 0;
+
+  color: #4d4d4d;
+
+  font-size: 14px;
+  line-height: 1.65;
+
+  overflow-wrap: break-word;
+}
+
+
+/* ANO */
+
+.events-page-year {
+  width: fit-content;
+
+  margin-top: 24px;
+
+  padding-top: 12px;
+
+  border-top:
+    1px solid var(--orange);
+
+  color: var(--black);
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+
+/* ======================================================
+   STATUS
+====================================================== */
+
+.events-page-status {
+  width: 100%;
+
+  padding: 80px 20px;
+
+  text-align: center;
+
+  color: #666;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+.events-page-error {
+  color: var(--pink);
+}
+
+
+/* ======================================================
+   TABLET GRANDE
+====================================================== */
+
+@media (max-width: 1150px) {
+
+  .events-page-hero {
+    padding:
+      85px
+      25px
+      60px;
+  }
+
+
+  .events-page-content {
+    width: calc(100% - 50px);
+  }
+
+
+  .events-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .events-page-card {
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      minmax(0, 1.1fr);
+  }
+
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 800px) {
+
+  .events-page-card {
+    grid-template-columns: 1fr;
+  }
+
+
+  .events-page-image {
+    height: 390px;
+  }
+
+
+  .events-page-info {
+    padding: 30px;
+  }
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 600px) {
+
+  .events-page-hero {
+    padding:
+      65px
+      20px
+      55px;
+  }
+
+
+  .events-page-hero h1 {
+    font-size: 54px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .events-page-hero p {
+    font-size: 15px;
+  }
+
+
+  .events-page-content {
+    width: calc(100% - 40px);
+
+    padding:
+      55px
+      0
+      80px;
+  }
+
+
+  /* FILTROS */
+
+  .events-page-filters {
+    gap: 7px;
+
+    margin-bottom: 32px;
+  }
+
+
+  .events-page-filters button {
+    padding: 9px 13px;
+
+    font-size: 11px;
+  }
+
+
+  /* CARD */
+
+  .events-page-grid {
+    gap: 18px;
+  }
+
+
+  .events-page-card {
+    border-radius:
+      6px 18px 6px 18px !important;
+  }
+
+
+  .events-page-image {
+    height: 300px;
+  }
+
+
+  .events-page-info {
+    padding: 25px;
+  }
+
+
+  .events-page-info h2 {
+    font-size: 32px;
+  }
+
+
+  .events-page-info p {
+    font-size: 13px;
+  }
+
+
+  .events-page-date {
+    left: 10px;
+    bottom: 10px;
+
+    padding: 7px 10px;
+  }
+
+}

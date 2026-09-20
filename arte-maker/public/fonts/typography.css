@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/*
+Quando tivermos o arquivo oficial da Typographia,
+vamos ativar este bloco.
+
+@font-face {
+  font-family: 'Typographia';
+  src: url('/fonts/typographia.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+:root {
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+}
+
+p {
+  font-family: var(--font-body);
+}

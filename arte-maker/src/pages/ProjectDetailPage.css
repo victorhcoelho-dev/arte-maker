@@ -1,0 +1,540 @@
+.project-detail {
+  width: 100%;
+  background: var(--white);
+}
+
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.project-detail-hero {
+  min-height: 620px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+
+/* CONTEÚDO COLORIDO */
+
+.project-detail-title {
+  padding: 90px 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* VOLTAR */
+
+.project-back {
+  width: fit-content;
+
+  margin-bottom: 50px;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  opacity: 0.8;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-back:hover {
+  opacity: 1;
+  transform: translateX(-4px);
+}
+
+
+/* SUBTÍTULO */
+
+.project-detail-title > span {
+  margin-bottom: 15px;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+/* TÍTULO */
+
+.project-detail-title h1 {
+  max-width: 620px;
+
+  margin-bottom: 24px;
+
+  font-size: clamp(44px, 5vw, 72px);
+
+  line-height: 0.9;
+
+  letter-spacing: -2px;
+}
+
+
+/* DESCRIÇÃO */
+
+.project-detail-title p {
+  max-width: 520px;
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+
+/* ======================================================
+   CORES DOS PROJETOS
+====================================================== */
+
+.project-detail.pink .project-detail-title {
+  background: var(--pink);
+  color: var(--white);
+}
+
+.project-detail.blue .project-detail-title {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.project-detail.orange .project-detail-title {
+  background: var(--orange);
+  color: var(--black);
+}
+
+
+/* ======================================================
+   IMAGEM PRINCIPAL
+====================================================== */
+
+.project-detail-image {
+  min-height: 620px;
+
+  overflow: hidden;
+
+  background: var(--cream);
+}
+
+.project-detail-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.project-detail-image:hover img {
+  transform: scale(1.02);
+}
+
+
+/* ======================================================
+   SOBRE O PROJETO
+====================================================== */
+
+.project-detail-about {
+  width: min(
+    var(--container),
+    calc(100% - 80px)
+  );
+
+  margin: 0 auto;
+
+  padding: 110px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    0.85fr
+    1.15fr;
+
+  gap: 80px;
+}
+
+
+/* TÍTULO */
+
+.project-detail-about-title > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--pink);
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.project-detail-about-title h2 {
+  font-size: clamp(
+    44px,
+    5vw,
+    70px
+  );
+
+  line-height: 0.9;
+
+  letter-spacing: -2px;
+
+  text-transform: uppercase;
+}
+
+
+/* TEXTO */
+
+.project-detail-about-text {
+  display: flex;
+  align-items: center;
+}
+
+.project-detail-about-text p {
+  max-width: 700px;
+
+  color: #444;
+
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+
+/* ======================================================
+   FRASE DE DESTAQUE
+====================================================== */
+
+.project-detail-highlight {
+  width: 100%;
+
+  min-height: 340px;
+
+  padding: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #111;
+  color: var(--white);
+}
+
+.project-detail-highlight p {
+  max-width: 1100px;
+
+  font-size: clamp(
+    42px,
+    6vw,
+    88px
+  );
+
+  line-height: 0.9;
+
+  letter-spacing: -3px;
+
+  font-weight: 900;
+}
+
+
+/* ======================================================
+   GALERIA
+====================================================== */
+
+.project-detail-gallery {
+  width: min(
+    var(--container),
+    calc(100% - 80px)
+  );
+
+  margin: 0 auto;
+
+  padding: 100px 0 120px;
+}
+
+
+/* CABEÇALHO */
+
+.project-detail-gallery-header {
+  margin-bottom: 45px;
+}
+
+.project-detail-gallery-header > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: var(--blue);
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.project-detail-gallery-header h2 {
+  font-size: clamp(
+    44px,
+    5vw,
+    70px
+  );
+
+  line-height: 0.9;
+
+  letter-spacing: -2px;
+
+  text-transform: uppercase;
+}
+
+
+/* GRID */
+
+.project-detail-gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.4fr
+    1fr
+    1fr;
+
+  gap: 16px;
+}
+
+
+/* PLACEHOLDERS */
+
+.project-gallery-placeholder {
+  min-height: 380px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--cream);
+
+  color: #aaa;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+/* FORMATOS */
+
+.project-gallery-placeholder:nth-child(1) {
+  border-radius:
+    6px 22px 6px 22px;
+}
+
+.project-gallery-placeholder:nth-child(2) {
+  border-radius:
+    22px 6px 22px 6px;
+}
+
+.project-gallery-placeholder:nth-child(3) {
+  border-radius:
+    6px 22px 22px 6px;
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 900px) {
+
+  .project-detail-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .project-detail-title {
+    padding: 80px 25px;
+  }
+
+  .project-back {
+    margin-bottom: 40px;
+  }
+
+  .project-detail-title h1 {
+    font-size: clamp(
+      50px,
+      10vw,
+      72px
+    );
+  }
+
+  .project-detail-image {
+    min-height: 450px;
+    height: 450px;
+  }
+
+  .project-detail-about {
+    width: calc(100% - 50px);
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 80px 0;
+  }
+
+  .project-detail-gallery {
+    width: calc(100% - 50px);
+  }
+
+  .project-detail-gallery-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .project-gallery-placeholder:first-child {
+    grid-column: span 2;
+  }
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 600px) {
+
+  .project-detail-title {
+    padding: 60px 20px;
+  }
+
+  .project-back {
+    margin-bottom: 32px;
+
+    font-size: 12px;
+  }
+
+  .project-detail-title > span {
+    font-size: 9px;
+  }
+
+  .project-detail-title h1 {
+    font-size: 48px;
+
+    line-height: 0.92;
+
+    letter-spacing: -1.5px;
+  }
+
+  .project-detail-title p {
+    max-width: 100%;
+
+    font-size: 15px;
+  }
+
+  /* IMAGEM */
+
+  .project-detail-image {
+    min-height: 360px;
+    height: 360px;
+  }
+
+  /* SOBRE */
+
+  .project-detail-about {
+    width: calc(100% - 40px);
+
+    padding: 65px 0;
+  }
+
+  .project-detail-about-title h2 {
+    font-size: 42px;
+  }
+
+  .project-detail-about-text p {
+    font-size: 16px;
+  }
+
+  /* FRASE */
+
+  .project-detail-highlight {
+    min-height: 270px;
+
+    padding: 45px 20px;
+  }
+
+  .project-detail-highlight p {
+    font-size: 40px;
+
+    letter-spacing: -1.5px;
+  }
+
+  /* GALERIA */
+
+  .project-detail-gallery {
+    width: calc(100% - 40px);
+
+    padding: 70px 0 80px;
+  }
+
+  .project-detail-gallery-header h2 {
+    font-size: 42px;
+  }
+
+  .project-detail-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery-placeholder:first-child {
+    grid-column: auto;
+  }
+
+  .project-gallery-placeholder {
+    min-height: 300px;
+  }
+
+}
+.project-detail-status {
+  min-height: 70vh;
+
+  padding: 120px 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  text-align: center;
+
+  color: #666;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+.project-detail-error {
+  color: var(--pink);
+}
+
+
+.project-detail-error a {
+  padding-bottom: 4px;
+
+  color: var(--black);
+
+  border-bottom:
+    2px solid var(--black);
+
+  font-size: 13px;
+  font-weight: 900;
+}

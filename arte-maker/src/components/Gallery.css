@@ -1,0 +1,836 @@
+.gallery {
+  position: relative;
+
+  padding: 110px 0 130px;
+
+  overflow: hidden;
+
+  background: var(--white);
+}
+
+
+/* ======================================================
+   CABEÇALHO
+====================================================== */
+
+.gallery-header {
+  margin-bottom: 55px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+
+.gallery-eyebrow {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: var(--pink);
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.gallery-header h2 {
+  margin: 0;
+
+  font-size: clamp(
+    48px,
+    5vw,
+    74px
+  );
+
+  line-height: 0.92;
+
+  letter-spacing: -3px;
+}
+
+
+.gallery-header-right {
+  width: min(380px, 100%);
+}
+
+
+.gallery-header-right p {
+  margin: 0 0 20px;
+
+  color: #666;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+.gallery-header-link {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding-bottom: 5px;
+
+  border-bottom:
+    1px solid var(--black);
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+
+.gallery-header-link span {
+  font-size: 16px;
+}
+
+
+/* ======================================================
+   GRID DESKTOP
+====================================================== */
+
+.gallery-grid {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  grid-template-rows:
+    repeat(2, 300px);
+
+  grid-auto-rows: 300px;
+
+  gap: 16px;
+}
+
+
+/* ======================================================
+   OBRA
+====================================================== */
+
+.artwork {
+  position: relative;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  background: #eceae5;
+
+  border-radius:
+    8px 20px 8px 20px;
+}
+
+
+.artwork img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.artwork:hover img {
+  transform: scale(1.035);
+}
+
+
+/* ======================================================
+   POSIÇÕES DESKTOP
+====================================================== */
+
+.artwork-1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+
+.artwork-2 {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+
+.artwork-3 {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+
+.artwork-4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+
+.artwork-5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+
+.artwork-6 {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+
+/* ======================================================
+   SEM IMAGEM
+====================================================== */
+
+.artwork-no-image {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eceae5;
+
+  color: #aaa;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* ======================================================
+   OVERLAY
+====================================================== */
+
+.artwork-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 24px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.35) 40%,
+      rgba(0, 0, 0, 0) 72%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease;
+}
+
+
+.artwork:hover
+.artwork-overlay {
+  opacity: 1;
+}
+
+
+.artwork-overlay-content {
+  width: 100%;
+
+  transform: translateY(12px);
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.artwork:hover
+.artwork-overlay-content {
+  transform: translateY(0);
+}
+
+
+.artwork-category {
+  width: fit-content;
+
+  margin-bottom: 9px;
+
+  padding: 5px 9px;
+
+  display: inline-flex;
+
+  border-radius: 4px;
+
+  background: var(--pink);
+
+  color: var(--white);
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+
+.artwork-overlay h3 {
+  margin: 0 0 7px;
+
+  color: var(--white);
+
+  font-size: clamp(
+    20px,
+    2vw,
+    30px
+  );
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+}
+
+
+.artwork-link {
+  color:
+    rgba(255, 255, 255, 0.85);
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* ======================================================
+   NOTA LARANJA
+====================================================== */
+
+.gallery-note {
+  width: 230px;
+  min-height: 155px;
+
+  position: absolute;
+
+  right: 20px;
+  bottom: -28px;
+
+  z-index: 10;
+
+  padding: 27px 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  background: var(--orange);
+
+  color: var(--black);
+
+  transform: rotate(-2deg);
+
+  box-shadow:
+    0 20px 35px
+    rgba(0, 0, 0, 0.10);
+}
+
+
+.gallery-note::before {
+  content: "";
+
+  width: 64px;
+  height: 12px;
+
+  position: absolute;
+
+  top: -6px;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    rgba(
+      255,
+      244,
+      220,
+      0.84
+    );
+}
+
+
+.gallery-note span {
+  font-size: 13px;
+
+  line-height: 1;
+}
+
+
+.gallery-note strong {
+  font-size: 17px;
+  font-weight: 900;
+
+  line-height: 1.05;
+}
+
+
+/* ======================================================
+   LOADING
+====================================================== */
+
+.gallery-loading {
+  min-height: 350px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+
+/* ======================================================
+   LINK MOBILE
+====================================================== */
+
+.gallery-mobile-link {
+  display: none;
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 1100px) {
+
+  .gallery {
+    padding:
+      85px 0 100px;
+  }
+
+
+  .gallery-header {
+    margin-bottom: 40px;
+  }
+
+
+  .gallery-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    grid-template-rows: none;
+
+    grid-auto-rows: 260px;
+
+    gap: 16px;
+  }
+
+
+  /*
+    No tablet retiramos todas as
+    posições especiais do desktop.
+  */
+
+  .artwork-1,
+  .artwork-2,
+  .artwork-3,
+  .artwork-4,
+  .artwork-5,
+  .artwork-6 {
+    grid-column: auto;
+    grid-row: auto;
+
+    width: 100%;
+    height: auto;
+
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    transform: none;
+  }
+
+
+  /*
+    A primeira obra continua maior,
+    ocupando as duas colunas.
+  */
+
+  .artwork-1 {
+    grid-column: 1 / 3;
+  }
+
+
+  /*
+    TABLET NÃO DEPENDE DE HOVER.
+    Nome e categoria ficam visíveis.
+  */
+
+  .artwork-overlay {
+    opacity: 1;
+
+    pointer-events: none;
+
+    padding: 20px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.78) 0%,
+        rgba(0, 0, 0, 0.28) 43%,
+        rgba(0, 0, 0, 0) 75%
+      );
+  }
+
+
+  .artwork-overlay-content {
+    transform: none;
+  }
+
+
+  /*
+    A nota deixa de usar position absolute.
+    Isso impede que ela saia do grid.
+  */
+
+  .gallery-note {
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    grid-column: 2;
+
+    width: min(
+      220px,
+      100%
+    );
+
+    min-height: 125px;
+
+    margin:
+      18px
+      10px
+      18px
+      auto;
+
+    padding:
+      24px
+      20px;
+
+    align-self: center;
+    justify-self: end;
+
+    transform:
+      rotate(-2deg);
+  }
+
+
+  .gallery-note span {
+    font-size: 11px;
+  }
+
+
+  .gallery-note strong {
+    font-size: 16px;
+  }
+
+}
+
+
+/* ======================================================
+   TABLET MENOR
+====================================================== */
+
+@media (max-width: 800px) {
+
+  .gallery-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 22px;
+  }
+
+
+  .gallery-header-right {
+    width: 100%;
+  }
+
+
+  .gallery-header-link {
+    display: none;
+  }
+
+
+  .gallery-mobile-link {
+    margin-top: 35px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .gallery-mobile-link a {
+    min-height: 44px;
+
+    padding:
+      0 16px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 18px;
+
+    border:
+      1px solid #d9d6cf;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+    font-weight: 900;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .gallery {
+    padding:
+      70px 0 70px;
+  }
+
+
+  .gallery-header {
+    margin-bottom: 30px;
+  }
+
+
+  .gallery-header h2 {
+    font-size:
+      clamp(
+        42px,
+        14vw,
+        58px
+      );
+
+    letter-spacing: -2px;
+  }
+
+
+  .gallery-header-right p {
+    font-size: 12px;
+  }
+
+
+  /* ======================================================
+     GRID MOBILE
+  ====================================================== */
+
+  .gallery-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    /*
+      IMPORTANTE:
+      não usamos mais grid-auto-rows: 280px,
+      porque isso também aumentava a linha
+      do post-it.
+    */
+    grid-auto-rows: auto;
+
+    gap: 16px;
+  }
+
+
+  /* ======================================================
+     OBRAS
+  ====================================================== */
+
+  .artwork-1,
+  .artwork-2,
+  .artwork-3,
+  .artwork-4,
+  .artwork-5,
+  .artwork-6 {
+    grid-column: 1;
+    grid-row: auto;
+
+    width: 100%;
+    height: 280px;
+
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    transform: none;
+  }
+
+
+  .artwork {
+    border-radius:
+      7px
+      18px
+      7px
+      18px;
+  }
+
+
+  .artwork-overlay {
+    opacity: 1;
+
+    padding: 18px;
+
+    pointer-events: none;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.26) 45%,
+        rgba(0, 0, 0, 0) 76%
+      );
+  }
+
+
+  .artwork-overlay-content {
+    transform: none;
+  }
+
+
+  .artwork-overlay h3 {
+    font-size: 23px;
+  }
+
+
+  .artwork-category {
+    margin-bottom: 7px;
+
+    font-size: 7px;
+  }
+
+
+  /* ======================================================
+     POST-IT
+  ====================================================== */
+
+  .gallery-note {
+    grid-column: 1;
+    grid-row: auto;
+
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    width: 210px;
+    min-height: 145px;
+    height: auto;
+
+    /*
+      Agora ele ocupa somente o espaço
+      necessário.
+    */
+    margin:
+      18px
+      auto
+      12px;
+
+    padding:
+      25px
+      21px;
+
+    align-self: auto;
+    justify-self: center;
+
+    transform:
+      rotate(-2deg);
+  }
+
+
+  .gallery-note::before {
+    width: 62px;
+    height: 12px;
+
+    top: -6px;
+    left: 50%;
+
+    transform:
+      translateX(-50%);
+  }
+
+
+  .gallery-note span {
+    font-size: 11px;
+  }
+
+
+  .gallery-note strong {
+    font-size: 17px;
+  }
+
+
+  /* ======================================================
+     BOTÃO DA GALERIA
+  ====================================================== */
+
+  .gallery-mobile-link {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .gallery-mobile-link a {
+    min-height: 44px;
+
+    padding:
+      0
+      16px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 18px;
+
+    border:
+      1px solid #d9d6cf;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+    font-weight: 900;
+  }
+
+}

@@ -1,0 +1,350 @@
+.admin-login-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 0;
+
+  background: #111;
+}
+
+
+.admin-login-panel {
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+}
+
+
+/* ======================================================
+   LADO ESQUERDO
+====================================================== */
+
+.admin-login-brand {
+  padding: 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: var(--pink);
+
+  color: var(--white);
+}
+
+
+.admin-login-brand img {
+  width: 155px;
+
+  margin-bottom: 70px;
+}
+
+
+.admin-login-brand > span {
+  margin-bottom: 14px;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.admin-login-brand h1 {
+  margin: 0;
+
+  font-size: clamp(
+    54px,
+    6vw,
+    90px
+  );
+
+  line-height: 0.86;
+
+  letter-spacing: -3px;
+}
+
+
+.admin-login-brand p {
+  max-width: 470px;
+
+  margin-top: 30px;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color:
+    rgba(255, 255, 255, 0.8);
+}
+
+
+/* ======================================================
+   FORMULÁRIO
+====================================================== */
+
+.admin-login-form-container {
+  padding: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f6f5f1;
+}
+
+
+.admin-login-form {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 45px;
+
+  background: var(--white);
+
+  border:
+    1px solid #e8e8e8;
+
+  border-radius:
+    8px 24px 8px 24px;
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.08);
+}
+
+
+.admin-login-heading {
+  margin-bottom: 35px;
+}
+
+
+.admin-login-heading > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--pink);
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.admin-login-heading h2 {
+  margin: 0 0 10px;
+
+  font-size: 45px;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+
+.admin-login-heading p {
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+/* ======================================================
+   CAMPOS
+====================================================== */
+
+.admin-login-form label {
+  display: block;
+
+  margin-bottom: 20px;
+}
+
+
+.admin-login-form label > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #333;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+.admin-login-form input {
+  width: 100%;
+
+  padding: 14px 15px;
+
+  border:
+    1px solid #d8d8d8;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: var(--white);
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.admin-login-form input:focus {
+  border-color: var(--pink);
+
+  box-shadow:
+    0 0 0 3px rgba(238, 48, 109, 0.1);
+}
+
+
+/* ======================================================
+   ERRO
+====================================================== */
+
+.admin-login-error {
+  margin-bottom: 18px;
+
+  padding: 11px 13px;
+
+  background:
+    rgba(238, 48, 109, 0.08);
+
+  border-radius: 6px;
+
+  color: var(--pink);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* ======================================================
+   BOTÃO
+====================================================== */
+
+.admin-login-form button {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 0;
+
+  border-radius: 7px;
+
+  background: var(--pink);
+
+  color: var(--white);
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.admin-login-form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+
+.admin-login-form button:disabled {
+  cursor: wait;
+
+  opacity: 0.6;
+}
+
+
+/* ======================================================
+   CARREGAMENTO
+====================================================== */
+
+.admin-login-loading {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* ======================================================
+   RESPONSIVO
+====================================================== */
+
+@media (max-width: 900px) {
+
+  .admin-login-panel {
+    grid-template-columns: 1fr;
+  }
+
+
+  .admin-login-brand {
+    min-height: 400px;
+
+    padding: 60px 30px;
+  }
+
+
+  .admin-login-brand img {
+    margin-bottom: 45px;
+  }
+
+
+  .admin-login-form-container {
+    padding: 60px 25px;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .admin-login-brand {
+    min-height: 350px;
+
+    padding: 45px 20px;
+  }
+
+
+  .admin-login-brand h1 {
+    font-size: 48px;
+  }
+
+
+  .admin-login-form-container {
+    padding: 40px 20px;
+  }
+
+
+  .admin-login-form {
+    padding: 30px 22px;
+  }
+
+
+  .admin-login-heading h2 {
+    font-size: 38px;
+  }
+
+}
